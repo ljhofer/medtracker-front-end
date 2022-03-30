@@ -2,13 +2,22 @@ $(document).ready(function() {
     const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
     const passwordRegEx = /^(?=.*\d)(?=.*[A-Za-z])([^\s]){9,20}$/;
 
-
-
     $('#registerForm').on("submit", function(event){
         event.preventDefault();
         // emailRegex.text($("#email").val);
         console.log(emailRegex.test($("#emailInput").val()));
         console.log(passwordRegEx.test($("#passwordInput").val()));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         if (
             $('#emailInput').val() == '' ||
             $('#firstNameInput').val() == '' ||
