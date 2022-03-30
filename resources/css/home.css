@@ -13,33 +13,9 @@ body {
 
 }
 
-li {
-    color: white;
-}
-
 #title, #sub-title {
     color: black;
     text-align: center;
 }
 
-#firstNameId, #lastnameId, p {
-    color: white;
-}
 
-#input-form {
-    margin-top: 40px;
-}
-
-
-/* .gradient-custom {
-    background: linear-gradient(to bottom right,
-    rgb(247, 204, 169),
-    rgb(245, 244, 242))
- } */
- 
-/* .card-registration .select-input.form-control[readonly]:not([disabled]) {
-   font-size: 1rem;
-   line-height: 2.15;
-   padding-left: .75em;
-   padding-right: .75em;
-} */

@@ -1,0 +1,31 @@
+body {
+    background: url("../images/laurynas-mereckas-1TL8AoEDj_c-unsplash.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+
+li, h2 {
+    color: white;
+}
+
+#input-form {
+    margin-top: 40px;
+}
+
+
+/* .gradient-custom {
+    background: linear-gradient(to bottom right,
+    rgb(247, 204, 169),
+    rgb(245, 244, 242))
+ } */
+ 
+/* .card-registration .select-input.form-control[readonly]:not([disabled]) {
+   font-size: 1rem;
+   line-height: 2.15;
+   padding-left: .75em;
+   padding-right: .75em;
+} */
