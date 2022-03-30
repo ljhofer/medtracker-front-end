@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <h2>Excercise Requirements</h2>
+    <ul>
+        <li>Create Account</li>
+        <li>First Name, Last Name, Email Address, Password, Confirm Password</li>
+        <li>Submit button, when clicked executes a validate function. Can be done as an onsubmit in form tag or added as an event listener.</li>
+        <li>Use Bootstrap and jQuery</li>
+        <li>When the user corrects their input mistakes remove any of the error formatting and border color.</li>
+
+    </ul>
+
+    <h2>Input Validation</h2>
+    <ul>
+        <li>All fields are required, use JS not required attribute</li>
+        <li>First name fields should not contain a space. Bonus: Use a regex in JS</li>
+        <li>Optional: find a prebuilt regex and use it to validate the email address is proper</li>
+        <li>Password and Confirm password are required and must be ther same. 2 different error messages</li>
+        <li>Password must contain a min of 8 characters and a mas of 20 characters.</li>
+        <li>Password must contain a letter and a number</li>
+        <li>If all validates properly show an alert that says something nice.</li>
+    </ul>
+
+    <h2>Error Messages</h2>
+    <ul>
+        <li>Each field that has an error us CSS to make the border of the input box red.</li>
+        <li>Under input bos create / insert HTML  to say what the error is.</li>
+        <li>Error message should be red and maybe a slightly smaller font</li>
+        <li>Try to make the message properly left aligned with the input box. (optional)</li>
+        <li>Extreme stretch: Execute the password validation check on each key press and alter the error messages as the password is being typed</li>
+    </ul>
+
+
+    <script>
+        $( document ).ready(function() {     
+        });
+    </script>
+
+    <script>
+        function validate() {
+            var inputValue = document.getElementById("firstNameId").value;
+
+            if ( inputValue == '') {
+                alert("First name is required");
+                return false;
+            }
+            
+            return true
+        }
+    </script>
+
+
+
+    <!-- <form id="input form" onsubmit="return validate()">
+
+        First Name <input type="text" name="firstName" id="firstNameId"><br>
+
+        Last Name <input type="text" name="lastName" id="lastNameId"></br>
+
+        Key Press <input type="text" name="keyPressed" id="keyPressed"></br>
+    
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration</h3>
+    
+                  <form id="registerForm" class="needs-validation" novalidate>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+
+                        <!-- First Name -->
+                        <div class="form-outline">
+                          <input type="text" id="firstNameInput" class="form-control form-control-lg" required />
+                          <label class="form-label" for="firstNameInput">First Name</label>
+                          <div class="invalid-feedback">
+                            Please enter a first name.
+                          </div>
+                        </div>
+      
+                      </div>
+
+                       <!-- Last Name -->
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                          <input type="text" id="lastNameInput" class="form-control form-control-lg" required/>
+                          <label class="form-label" for="lastNameInput">Last Name</label>
+                          <div class="invalid-feedback">
+                            Please enter a last name.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                     <!-- Password -->
+                    <div class="row">
+                      <div class="col-md-6 mb-2 pb-2">
+                        <div class="form-outline">
+                          <input type="password" id="passwordInput" class="form-control form-control-lg" required />
+                          <label class="form-label" for="passwordInput">Password</label>
+                          <div class="invalid-feedback">
+                            Please enter a password.
+                          </div>
+                        </div>
+                      </div>
+
+                    <!-- Confirm Password -->
+                      <div class="col-md-6 mb-2 pb-2">
+                        <div class="form-outline">
+                          <input type="password" id="confirmPasswordInput" class="form-control form-control-lg" 
+                          onkeyup='check();' required/>
+                          <label class="form-label" for="confirmPasswordInput">Confirm Password</label>
+                          <div class="invalid-feedback">
+                            Please confirm your password.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                     <!-- Confirm Password -->
+                    <div class="row">
+                        <div class="col-md-6 mb-2 pb-2">
+                          <div class="form-outline">
+                            <input type="email" id="emailInput" class="form-control form-control-lg" required />
+                            <label class="email" for="emailInput">Email</label>
+                            <div class="invalid-feedback">
+                                Please enter an email.
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+      
+    
+    
+                    <div class="row">
+                      <div class="col-md-12 mb-4">
+                        <h6 class="mb-2 pb-1">User Type: </h6>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                            id="admin" value="option1"
+                          />
+                          <label class="form-check-label" for="admin">Admin</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input" type="radio" name="inlineRadioOptions" 
+                             id="user" value="option2" checked />
+                          <label class="form-check-label" for="user">User</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        </div>
+                      </div>
+                    </div>
+      
+                    
+      
+                    <div class="row">
+                      <div class="col-12">
+                        <select class="select form-control-md">
+                          <option value="1" disabled>Dropdown</option>
+                          <option value="2">Option 1</option>
+                          <option value="3">Option 2</option>
+                          <option value="4">Option 3</option>
+                        </select>
+                        <label class="form-label select-label">Choose Dropdown Choice</label>
+                      </div>
+                    </div>
+     
+                    <div class="row">
+                     <div class="col-md-3 mt-4 pt-2">
+                      <input class="btn btn-outline-primary btn-md" type="submit" value="Submit" />
+                    </div>
+                    <div class="col-md-3 mt-4 pt-2">
+                      </div>
+                      <div class="col-md-6 mt-4 pt-2" id="message">Welcome Line Here</div>
+                    </div>
+    
+    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    
+    
+    <!-- <script>
+		const button = document.querySelector('button');
+		// Function to modify the text content of the paragraph
+        const changeText = () => {
+            const p = document.querySelector('p');
+
+            p.textContent = "I changed because of an event listener.";
+            button.textContent="I was clicked";
+        }
+
+        // Listen for click event
+        button.addEventListener('click', changeText);
+   </script> -->
+
+    <!-- <script>
+        const button = document.querySelector('button');
+
+        // Function to modify the text content of the paragraph
+            const changeText = () => {
+            const p = document.querySelector('p');
+
+            p.textContent = "I changed because of an event listener.";
+            button.textContent="I was clicked";
+        }
+
+        const mouseOut = () => {
+            const p = document.querySelector('p');
+            p.textContent = "Mouseout";
+
+            p.style.backgroundColor = "red";
+        }
+
+        button.addEventListener('mouseover', changeText);
+
+        // Listen for click event
+        button.addEventListener('mouseout', mouseOut);
+    </script>
+    
+    <script>
+        document.addEventListener('keydown', function() {
+            console.log('key: ' + event.keyCode);
+            console.log('key: ' + event.key);
+            console.log('code: ' + event.code);
+        });
+
+    </script> -->
+     
+
+    <script src="resources/js/register.js"></script>
+
+
+</body>
+</html>
