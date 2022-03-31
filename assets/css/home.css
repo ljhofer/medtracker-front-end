@@ -17,11 +17,49 @@ body {
     color: black;
     text-align: center;
     margin-top: 35px;
+    font-size: 75px;
 }
 
 #sub-title {
     color: black;
     text-align: center;
+    font-size: 45px;
+}
+
+#main-div {
+    margin: 50px;
+}
+
+#dropdown-div {
+    padding: 25px;
+    margin: 50px;
+    margin-left: 75px;
+    
+}
+
+a:link {
+    color:black;
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+}
+
+#login-user, #register-user {
+
+    text-align: center;
+    background-color: orange;
+    margin: 15px;
+}
+
+/* #dropdown {
+    margin: 50px;
+} */
+
+label {
+    color: black;
 }
 
 
