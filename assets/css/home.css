@@ -13,9 +13,18 @@ body {
 
 }
 
-#title, #sub-title {
+#title {
+    color: black;
+    text-align: center;
+    margin-top: 35px;
+}
+
+#sub-title {
     color: black;
     text-align: center;
 }
 
 
+#video {
+    margin: 50px;
+}
