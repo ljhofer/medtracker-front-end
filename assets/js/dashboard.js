@@ -33,19 +33,6 @@ let medList = [
 
 function createMedCards() {
 
-    // cardCounter = 1;
-
-    // console.log(medList[0]);
-
-    // for ( let i = 0; i < medList.length; i++) {
-
-    //     let newMedCard = $("<h3>");
-    //     let newMedName = medList[i].medName;
-
-    //     newMedCard.text(newMedName);
-    //     newMedCard.appendTo(medListDiv);
-    // }
-
     $(medList).each(function(i, med) {
 
         template =`
@@ -58,8 +45,7 @@ function createMedCards() {
             </div>
         </div>
         `
-        console.log(template);
-
+        
         medListDiv.insertAdjacentHTML("beforeend", template);
     })
 
