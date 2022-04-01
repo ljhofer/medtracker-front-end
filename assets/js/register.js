@@ -3,13 +3,7 @@ $(document).ready(function() {
     const passwordRegex = /^(?=.*\d)(?=.*[A-Za-z])([^\s]){9,20}$/;
 
     $('#registerForm').on("submit", function(event){
-        // event.preventDefault();
-
-        console.log(emailRegex.test($("#emailInput")));
-        console.log(passwordRegex.test($("#passwordInput")));
-
-        // console.log(emailRegex.test($("#emailInput")).val);
-        // console.log(passwordRegex.test($("#passwordInput")).val);
+        event.preventDefault();
         
         if ( emailRegex.test($("#emailInput").val()) && passwordRegex.test($("#passwordInput").val()) ) {
           window.location.href = "dashboard.html";
