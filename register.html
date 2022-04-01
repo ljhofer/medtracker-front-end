@@ -119,8 +119,7 @@
                   <!-- Confirm Password -->
                     <div class="col-md-6 mb-2 pb-2">
                       <div class="form-outline">
-                        <input type="password" id="confirmPasswordInput" class="form-control form-control-lg" 
-                        onkeyup='check();' required/>
+                        <input type="password" id="confirmPasswordInput" class="form-control form-control-lg" required/>
                         <label class="form-label" for="confirmPasswordInput">Confirm Password</label>
                         <div class="invalid-feedback">
                           Please confirm your password.
@@ -142,6 +141,13 @@
                         </div>
                       </div>
                   </div>
+
+                  <h2>I am a:</h2>
+                  <select class="select form-control-md" id="dropdown">
+                    <option value="1" disabled>Choose one</option>
+                    <option value="2">User</option>
+                    <option value="3">Admin</option>
+                  </select>
     
                   <div class="col-md-3 mt-4 pt-2">
                     <input class="btn btn-secondary btn-md" type="submit" value="Submit" />
@@ -164,9 +170,9 @@
                         <label class="form-check-label" for="user">User</label>
                       </div>
                       <div class="form-check form-check-inline">
-                      </div>
+                      </div> -->
                     </div>
-                  </div> -->
+                  </div>
                 </form>
               </div>
             </div>
@@ -223,6 +229,8 @@
         });
 
     </script> -->
+
+    <!-- onkeyup='check();' -->
      
 
     <script src="assets/js/register.js"></script>

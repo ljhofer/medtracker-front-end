@@ -1,32 +1,20 @@
 $(document).ready(function() {
     const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-    const passwordRegEx = /^(?=.*\d)(?=.*[A-Za-z])([^\s]){9,20}$/;
+    const passwordRegex = /^(?=.*\d)(?=.*[A-Za-z])([^\s]){9,20}$/;
 
     $('#registerForm').on("submit", function(event){
-        event.preventDefault();
-        // emailRegex.text($("#email").val);
-        console.log(emailRegex.test($("#emailInput").val()));
-        console.log(passwordRegEx.test($("#passwordInput").val()));
+        // event.preventDefault();
+
+        console.log(emailRegex.test($("#emailInput")));
+        console.log(passwordRegex.test($("#passwordInput")));
+
+        // console.log(emailRegex.test($("#emailInput")).val);
+        // console.log(passwordRegex.test($("#passwordInput")).val);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        if (
-            $('#emailInput').val() == '' ||
-            $('#firstNameInput').val() == '' ||
-            $('#lastNameInput').val() == '' ||
-            $('#passwordInput').val() == '' ||
-            $('#confirmPasswordInput').val() == ''
-        ) {
-            // alert("All fields are required in order to register");
-            return false;
+        if ( emailRegex.test($("#emailInput").val()) && passwordRegex.test($("#passwordInput").val()) ) {
+          window.location.href = "dashboard.html";
+        } else {
+          console.log("failed");
         }
 
     })
