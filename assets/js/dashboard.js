@@ -11,7 +11,6 @@ let medList = [
         dosage: "81 mg" 
         
     },
-
     {
         medName: "Oxycodone w/Acetaminophen", 
         medPurpose: "Pain reliever",
@@ -19,7 +18,6 @@ let medList = [
         dosage: "325 mg"
         
     },
-
     {
         medName: "Zofran", 
         medPurpose: "Antinausea",
