@@ -10,12 +10,13 @@ body {
 h2 {
     color: white;
     margin: 20px;
+    font-size: xx-large;
 }
 
 #table-div {
 
-    margin-left: 50px;
-    margin-right: 200px;
+    margin-left: 100px;
+    
 
 }
 
