@@ -1,5 +1,5 @@
 
-const medListDiv = document.getElementById("card-div"); 
+const medListDiv = document.getElementById("table-div"); 
 
 
 let medList = [
@@ -29,24 +29,36 @@ let medList = [
 ]
 
 
-function createMedCards() {
+function createMedTable() {
 
     $(medList).each(function(i, med) {
 
         template =`
-        <div class="card col-4" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">${med.medName}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${med.medPurpose}</h6>
-                <p class="card-text">${med.frequency}</p>
-                <p class="card-text">${med.dosage}</p>
-            </div>
-        </div>
+        <tr class="table table-striped">
+            <td class="table-secondary">${med.medName}</td>
+            <td class="table-secondary">${med.medPurpose}</td>
+            <td class="table-secondary">${med.frequency}</td>
+            <td class="table-secondary">${med.dosage}</td>
+        </tr>
         `
-        
+
         medListDiv.insertAdjacentHTML("beforeend", template);
     })
 
 };
 
-createMedCards();
+createMedTable();
+
+
+
+
+
+
+        // <div class="card col-4" style="width: 18rem;">
+        //     <div class="card-body">
+        //         <h5 class="card-title">${med.medName}</h5>
+        //         <h6 class="card-subtitle mb-2 text-muted">${med.medPurpose}</h6>
+        //         <p class="card-text">${med.frequency}</p>
+        //         <p class="card-text">${med.dosage}</p>
+        //     </div>
+        // </div>

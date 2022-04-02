@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <title>MedTracker - Dashboard</title>
+
 </head>
 <body>
 
@@ -36,11 +37,17 @@
     </nav>
     
     <h2>My Meds</h2>
-    <div class="row" id="card-div">
-        <!-- dynamically populated cards will go here -->
 
-    </div>
-
+    <table class="table table-secondary" id="table-div">
+          <tr class="table table-striped">
+            <th scope="col" class="table-secondary">Name</th>
+            <th scope="col" class="table-secondary">Purpose</th>
+            <th scope="col" class="table-secondary">Frequency</th>
+            <th scope="col" class="table-secondary">Dosage</th>
+          </tr>
+          
+          
+    </table>
 
     <script src="assets/js/dashboard.js"></script>
 </body>
